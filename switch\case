@@ -1,0 +1,45 @@
+#include <stdio.h> 
+int main(void) {
+  int balance = 2000 ;
+  int amount, operation, transfer ;
+  printf("Your balance is %d\n", balance) ;
+  printf("Choose your operations:\n") ;
+  printf("Choose '1' for withdraw:\n") ;
+  printf("Choose '2' for deposit:\n") ;
+  printf("Choose '3' for transfer:\n") ;
+  printf("Choose '4' for refund the card:\n") ;
+  scanf("%d", &operation) ;
+
+  switch(operation) {
+    case 1 :
+    printf("Enter your withdraw:\n") ;
+    scanf("%d", &amount);
+    if (balance >= amount) {
+    balance = balance - amount ;
+    printf("Your operation is succesfull:\n") ;
+    printf("Balance is %d\n", balance);
+  }else {if (balance < amount){
+    printf("You are poor.\n") ;
+}}  break ;
+    case 2 :
+    printf("Enter your deposit:") ;
+    scanf("%d", &amount) ;
+    balance = balance + amount ;
+    printf("Your balance is :%d", balance) ;
+    break ;
+    case 3 :
+    printf("Enter your transfer value:\n") ;
+    scanf("%d",&transfer) ;
+    if (balance >= transfer) {
+    balance = balance - transfer ;
+    printf("Your operation is succesfull:\n") ;
+    printf("Balance is :%d\n",balance) ;
+  }else {if (balance < transfer){
+    printf("Your money is not enough for this operation:\n");
+}}  break ;
+    case 4 :
+    printf("Your card is succesfully refund.\n") ;
+    break ;
+}    
+  return 0 ;
+}
