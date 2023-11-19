@@ -1,7 +1,7 @@
 #include <stdio.h> 
 int main(void) {
   int balance = 2000 ;
-  int amount, operation, transfer ;
+  int amount = 0, operation = 0, transfer = 0 ;
   printf("Your balance is %d\n", balance) ;
   printf("Choose your operations:\n") ;
   printf("Choose '1' for withdraw:\n") ;
@@ -40,6 +40,8 @@ int main(void) {
     case 4 :
     printf("Your card is succesfully refund.\n") ;
     break ;
+    default :
+    printf("Please enter a valid number.\n") ;
 }    
   return 0 ;
 }
